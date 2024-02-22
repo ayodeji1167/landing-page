@@ -5,9 +5,9 @@ import { AppProvider } from '@/providers/AppProvider';
 import Header from '@/components/Layout/Header/Header';
 import Footer from '@/components/Layout/Footer/Footer';
 
-const inter = Inter({ subsets: ['latin'] });
-const josefin_sans = Josefin_Sans({ subsets: ['latin'] });
-const urbanist = Urbanist({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const josefin_sans = Josefin_Sans({ subsets: ['latin'], display: 'swap' });
+const urbanist = Urbanist({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Create Next App',

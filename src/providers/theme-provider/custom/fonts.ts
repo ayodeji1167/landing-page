@@ -1,7 +1,4 @@
-const fonts = {
-  heading: `'Josefin Sans',sans-serif`,
-  body: `'Urbanist',sans-serif`,
-};
+const fonts = {};
 
 const fontSizes = {
   xs: '11px',
@@ -59,7 +56,6 @@ const textStyles = {
     fontSize: { base: '14px', md: '16px' },
     fontWeight: 'regular',
     lineHeight: '165%',
-    fontFamily: 'body',
   },
   subHeading: {
     fontSize: { base: '20px', md: '26px' },
