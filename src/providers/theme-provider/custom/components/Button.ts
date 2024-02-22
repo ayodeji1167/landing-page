@@ -6,17 +6,18 @@ export const Button: ComponentDefaultProps = {
   },
   baseStyle: {
     variant: 'solid',
-    borderRadius: '10px',
+    borderRadius: '20px',
     fontFamily: 'body',
-    minHeight: '45px',
+    minHeight: '200px',
     fontSize: { base: '14px', md: '16px' },
+    fontWeight: '600',
   },
 
   variants: {
     primary: {
       color: 'white',
       bgColor: 'primary.500',
-      width: { md: '130px' },
+      width: { md: '823px' },
       _focus: {
         boxShadow:
           '28px 40px 20px rgba(24, 19, 162, 0.03), 16px 23px 17px rgba(24, 19, 162, 0.1), 7px 10px 12px rgba(24, 19, 162, 0.17), 2px 3px 7px rgba(24, 19, 162, 0.2), 0px 0px 0px rgba(24, 19, 162, 0.2)',
@@ -36,7 +37,7 @@ export const Button: ComponentDefaultProps = {
       bgColor: 'white',
       border: '2px solid',
       borderColor: 'primary.500',
-      width: { md: '130px' },
+      minWidth: { md: '130px' },
       _focus: {
         bgColor: 'white',
         borderRadius: '10px',
@@ -46,89 +47,18 @@ export const Button: ComponentDefaultProps = {
         bgColor: 'white',
       },
     },
-    profileHeader: {
-      color: 'white',
-      fontSize: { base: '12px', md: '16px' },
-      _focus: {
-        bg: 'secondary.500',
-      },
-      bg: '#2F313F',
-      borderRadius: '3rem',
-      px: '2rem',
-      minH: '0.2rem',
-      h: '2.4rem',
-    },
+
     solid: {
       color: 'white',
       bgColor: 'primary.500',
-      width: { md: '130px' },
+      p: '0',
+      width: { md: '85px' },
       _focus: {
         bgColor: 'brand.primary.500',
       },
       _hover: {
         color: 'white',
-        bgColor: 'primary.500',
-      },
-    },
-
-    roundSolid: {
-      color: 'white',
-      bgColor: 'primary.500',
-      minW: '130px',
-      minH: '20px',
-      borderRadius: '30px',
-      fontSize: { base: '12px', md: '16px' },
-      _focus: {
-        bgColor: 'brand.primary.500',
-      },
-      _hover: {
-        color: 'white',
-        bgColor: 'primary.500',
-      },
-    },
-    roundSolidWhite: {
-      bgColor: 'white',
-      color: 'primary.500',
-      minW: '130px',
-      minH: '20px',
-      borderRadius: '30px',
-      fontSize: { base: '12px', md: '16px' },
-      _focus: {
-        bgColor: 'white',
-      },
-      _hover: {
-        bgColor: 'white',
-        color: 'primary.500',
-      },
-    },
-    dashboardBlue: {
-      color: 'white',
-      bgColor: 'secondary.500',
-      padding: '0',
-      lineHeight: '1px',
-      minW: { base: '70px', md: '130px' },
-      minH: { base: '20px', md: '20px' },
-      height: { base: '30px', md: '30px' },
-      borderRadius: '30px',
-      fontSize: { base: '12px', md: '16px' },
-      _focus: {
-        bgColor: '#2F313F',
-      },
-      _hover: {
-        bgColor: '#2F313F',
-      },
-    },
-    subHead: {
-      color: 'white',
-      bg: 'secondary.500',
-      minH: '10px',
-      fontSize: { base: '12px', md: '16px' },
-      _focus: {
-        bg: 'secondary.500',
-      },
-      _hover: {
-        color: 'white',
-        bg: 'secondary.500',
+        bgColor: 'primary.600',
       },
     },
   },
@@ -139,11 +69,11 @@ export const Button: ComponentDefaultProps = {
       fontSize: 'sm',
     },
     md: {
-      minHeight: '48px',
+      minHeight: '42px',
       fontSize: 'md',
     },
     lg: {
-      minHeight: '56px',
+      minHeight: '42px',
       fontSize: 'lg',
     },
   },

@@ -1,6 +1,6 @@
 const fonts = {
-  heading: `'BR Firma',sans-serif`,
-  body: `'DM Sans',sans-serif`,
+  heading: `'Josefin Sans',sans-serif`,
+  body: `'Urbanist',sans-serif`,
 };
 
 const fontSizes = {
