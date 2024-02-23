@@ -1,9 +1,9 @@
 import saleIcon from '@/assets/svg/sale.svg';
-import key from '@/assets/svg/key.svg.svg';
-import management from '@/assets/svg/management.svg.svg';
-import investment from '@/assets/svg/investment.svg.svg';
-import valuation from '@/assets/svg/valuation.svg.svg';
-import inspection from '@/assets/svg/inspection.svg.svg';
+import key from '@/assets/svg/key.svg';
+import management from '@/assets/svg/management.svg';
+import investment from '@/assets/svg/investment.svg';
+import valuation from '@/assets/svg/valuation.svg';
+import inspection from '@/assets/svg/inspection.svg';
 export const offerings = [
   {
     title: 'Property Sales',

@@ -23,6 +23,7 @@ export default function GetToKnow() {
               fontFamily={'heading'}
               fontWeight={700}
               as={'h3'}
+              textTransform={'uppercase'}
             >
               Get to Know BATs Properties
             </Text>
