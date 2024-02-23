@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header>
       <SizeWrapper>
-        <Flex h={'4rem'} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex h={'5rem'} alignItems={'center'} justifyContent={'space-between'}>
           <Box w={'4rem'} cursor={'pointer'}>
             <Logo />
           </Box>
