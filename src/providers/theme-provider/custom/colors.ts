@@ -23,6 +23,7 @@ export const colors = {
     800: '#07111d',
     900: '#050d16',
   },
+
   secondary: {
     50: '#e6eef2',
     100: '#b0cad5',

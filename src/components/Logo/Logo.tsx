@@ -2,21 +2,23 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import logo from '@/assets/logo.png';
+import whiteLogo from '@/assets/white-logo.png';
 import Image from 'next/image';
 // import logo from "@/assets/logo.png";
 
 type LogoProps = {
   to?: string;
   text?: ReactNode;
+  color?: 'white';
 };
 
 export const Logo = (props: LogoProps) => {
-  const { to } = props;
+  const { to, color } = props;
 
   function PlainLogo() {
     return (
       <Image
-        src={logo}
+        src={color === 'white' ? whiteLogo : logo}
         alt="logo"
         style={{ width: '100%', height: '100%' }}
         {...props}
