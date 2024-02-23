@@ -37,12 +37,12 @@
   left: 50%;
   z-index: 10;
 }
-.swiper-container {
+.mySwiper .swiper-container {
   padding-bottom: 31rem;
   background-color: yellow;
 }
 
-.swiper-pagination {
+.mySwiper .swiper-pagination {
     position: absolute;
   bottom: 0rem !important;
 /* border: 1px solid red; */
@@ -54,7 +54,7 @@
   z-index: 30;
 }
 
-.swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet {
   background: #cd9fae;
   width: 20px;
   height: 20px;
@@ -64,7 +64,7 @@
   border: 1px solid #84143a;
 }
 
-.swiper-pagination-bullet-active {
+.mySwiper .swiper-pagination-bullet-active {
   width: 26px;
   height: 26px;
   background: #84143a;
