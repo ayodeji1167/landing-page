@@ -1,5 +1,7 @@
-const fonts = {};
-
+const fonts = {
+  heading: 'var(--font-josefin)',
+  body: 'var(--font-urbanist)',
+};
 const fontSizes = {
   xs: '11px',
   sm: '13px',

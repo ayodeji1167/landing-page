@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@/components/Ui/chakra/Box';
 import Text from '@/components/Ui/chakra/Text';
+import Text from '@/components/Ui/chakra/Text';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 
 export default function Hero() {
@@ -15,6 +16,8 @@ export default function Hero() {
           textAlign={'center'}
           color={'white'}
           fontFamily={'heading'}
+          lineHeight={'3.1rem'}
+          maxW={'30rem'}
         >
           Discover Your Dream Home in Dubai with BATs Properties
         </Text>
