@@ -22,7 +22,7 @@ export default function GetToKnow() {
               fontSize={'2rem'}
               fontFamily={'heading'}
               fontWeight={700}
-              as={'h2'}
+              as={'h3'}
             >
               Get to Know BATs Properties
             </Text>
