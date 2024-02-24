@@ -8,6 +8,7 @@ import PropertyType from './components/PropertyType';
 import Bedroom from './components/Bedroom';
 import Price from './components/Price';
 import OtherFilter from './components/OtherFilter';
+import PopularSearches from './components/PopularSearches';
 
 export default function Filter() {
   return (
@@ -24,6 +25,7 @@ export default function Filter() {
           </Button>
           <OtherFilter />
         </Flex>
+        <PopularSearches />
       </SizeWrapper>
     </Box>
   );
