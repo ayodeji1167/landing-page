@@ -5,6 +5,7 @@ import SearchInput from './components/SearchInput';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import InterestedIn from './components/InterestedIn';
 import PropertyType from './components/PropertyType';
+import Bedroom from './components/Bedroom';
 
 export default function Filter() {
   return (
@@ -14,6 +15,7 @@ export default function Filter() {
           <SearchInput />
           <InterestedIn />
           <PropertyType />
+          <Bedroom />
         </Flex>
       </SizeWrapper>
     </Box>
