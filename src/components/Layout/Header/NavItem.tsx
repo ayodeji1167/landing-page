@@ -11,7 +11,8 @@ export default function NavItem({
   name: string;
 }) {
   const pathname = usePathname();
-  const isCurrentPath = pathname === link;
+  const splited = pathname.split('/')[1];
+  const isCurrentPath = `/${splited}` === link;
   return (
     <Link href={link}>
       <Text

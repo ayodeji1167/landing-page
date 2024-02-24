@@ -3,7 +3,7 @@ import Box from '@/components/Ui/chakra/Box';
 import Text from '@/components/Ui/chakra/Text';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 
-export default function ExploreMore() {
+export default function TopBanner({ name }: { name?: string }) {
   return (
     <Box bg={'#510C23'} py={'2.3rem'}>
       <SizeWrapper>
@@ -16,7 +16,7 @@ export default function ExploreMore() {
           color={'#F3E8EB'}
           textTransform={'uppercase'}
         >
-          Explore Our Diverse Portfolio of Properties
+          {name}
         </Text>
       </SizeWrapper>
     </Box>

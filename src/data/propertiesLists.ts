@@ -45,7 +45,7 @@ export const properties: Array<IProperty> = [
       mainImage: image4,
       otherImages: [image8, image12, image15, image16],
     },
-    id: '3468',
+    id: '346P8',
     location: 'Dubai Marina',
   },
   {
@@ -60,7 +60,7 @@ export const properties: Array<IProperty> = [
       mainImage: image2,
       otherImages: [image7, image10, image14, image1],
     },
-    id: '3469',
+    id: '346O9',
     location: 'Jumeirah Golf Estates',
   },
   {
@@ -75,7 +75,7 @@ export const properties: Array<IProperty> = [
       mainImage: image6,
       otherImages: [image9, image13, image15, image2],
     },
-    id: '3470',
+    id: '34I70',
     location: 'Jumeirah Beach Residence',
   },
   {
@@ -90,7 +90,7 @@ export const properties: Array<IProperty> = [
       mainImage: image4,
       otherImages: [image7, image11, image14, image3],
     },
-    id: '3471',
+    id: '347U1',
     location: 'Downtown Dubai',
   },
   {
@@ -117,7 +117,7 @@ export const properties: Array<IProperty> = [
     pricePerSquareFeet: 3200,
     price: 12160000,
     images: { mainImage: image3, otherImages: [image2, image10, image16] },
-    id: '3473',
+    id: '347L3',
     location: 'Palm Jumeirah',
   },
 
@@ -130,7 +130,7 @@ export const properties: Array<IProperty> = [
     pricePerSquareFeet: 2462,
     price: 3799000,
     images: { mainImage: image11, otherImages: [image10, image2, image3] },
-    id: '3457',
+    id: '34K57',
     location: 'The Views , The Fairways North',
   },
   {
@@ -145,7 +145,7 @@ export const properties: Array<IProperty> = [
       mainImage: image8,
       otherImages: [image1, image4, image15, image14],
     },
-    id: '3474',
+    id: '34B74',
     location: 'Business Bay',
   },
   {
@@ -160,7 +160,7 @@ export const properties: Array<IProperty> = [
       mainImage: image6,
       otherImages: [image9, image12, image16, image13],
     },
-    id: '3475',
+    id: '347Z5',
     location: 'Al Barari',
   },
   {
@@ -175,7 +175,7 @@ export const properties: Array<IProperty> = [
       mainImage: image2,
       otherImages: [image7, image10, image13, image11],
     },
-    id: '3476',
+    id: '34D76',
     location: 'DIFC',
   },
   {
@@ -190,7 +190,7 @@ export const properties: Array<IProperty> = [
       mainImage: image3,
       otherImages: [image5, image11, image14, image9],
     },
-    id: '3477',
+    id: '3477T',
     location: 'Jumeirah Beach Residence',
   },
   {
@@ -205,7 +205,7 @@ export const properties: Array<IProperty> = [
       mainImage: image1,
       otherImages: [image4, image8, image15, image8],
     },
-    id: '3478',
+    id: '347S8',
     location: 'The World Islands',
   },
   {
@@ -220,7 +220,7 @@ export const properties: Array<IProperty> = [
       mainImage: image9,
       otherImages: [image2, image6, image13, image7],
     },
-    id: '3479',
+    id: '347D9',
     location: 'Al Maktoum City',
   },
 ];
