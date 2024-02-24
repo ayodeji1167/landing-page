@@ -8,8 +8,8 @@ export default function SearchInput() {
       border={'1px solid #A2A5AB'}
       borderRadius={'1.2rem'}
       alignItems={'center'}
-      py={'.2rem'}
       px={'.3rem'}
+      h={'3rem'}
     >
       <CiSearch size={'1.5rem'} />
       <Input
