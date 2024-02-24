@@ -14,7 +14,7 @@ export default function PopularSearches() {
         fontWeight={700}
         mb={'1rem'}
       >
-        Popular Searches{' '}
+        Popular Searches
       </Text>
       <Flex justifyContent={'space-between'} flexWrap={'wrap'}>
         {searches.map((item) => (

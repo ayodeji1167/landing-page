@@ -12,7 +12,7 @@ import PopularSearches from './components/filter/PopularSearches';
 
 export default function Filter() {
   return (
-    <Box py={'3.2rem'}>
+    <Box pt={'3.2rem'}>
       <SizeWrapper>
         <Flex gap={'1.5rem'} alignItems={'center'}>
           <SearchInput />
