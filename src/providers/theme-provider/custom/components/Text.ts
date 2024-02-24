@@ -21,5 +21,14 @@ export const Text = {
       fontFamily: 'body',
       fontWeight: '500',
     },
+    subHeading: {
+      fontSize: {
+        base: '1rem',
+        md: '1rem',
+        lg: '2rem',
+      },
+      fontFamily: 'heading',
+      fontWeight: '700',
+    },
   },
 };
