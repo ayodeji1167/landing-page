@@ -19,7 +19,7 @@ import SimilarProperties from '../components/SimilarProperties';
 export default function page({ params }: any) {
   const currentProperty = properties.find((item) => item.id === params.id);
   return (
-    <Box>
+    <Box mb={'8rem'}>
       <TopBanner name={currentProperty?.name} />
       <SizeWrapper>
         <SimpleGrid
