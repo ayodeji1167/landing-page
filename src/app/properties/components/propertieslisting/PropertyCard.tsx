@@ -10,13 +10,24 @@ import bathsvg from '@/assets/svg/bath.svg';
 import sqfeet from '@/assets/svg/sqfeet.svg';
 import Link from 'next/link';
 
-function Item({ icon, value }: { icon: any; value: string }) {
+export function Item({ icon, value }: { icon: any; value: string }) {
   return (
     <Flex color={'#424955'} gap={'.3rem'} alignItems={'center'}>
       <Box>
         <Image alt={value} src={icon.src} />
       </Box>
       <Text fontSize={'14px'}>{value}</Text>
+    </Flex>
+  );
+}
+
+export function LocationComp({ location }: { location?: string }) {
+  return (
+    <Flex gap={'.5rem'} alignItems={'center'}>
+      <Image alt="location" src={locationImg.src} />
+      <Text fontSize={'14px'} color="#424955">
+        {location}
+      </Text>
     </Flex>
   );
 }
@@ -54,14 +65,11 @@ export default function PropertyCard(props: IProperty) {
           <Text fontFamily={'heading'} fontWeight={700} fontSize={'1.2rem'}>
             {name}
           </Text>
-          <Flex mb={'1.4rem'} gap={'.5rem'} alignItems={'center'}>
-            <Image alt="location" src={locationImg.src} />
-            <Text fontSize={'14px'} color="#424955">
-              {location}
-            </Text>
-          </Flex>
+          <Box my={'1rem'}>
+            <LocationComp location={location} />
+          </Box>
 
-          <Flex gap={'1.3rem'} mt={'1.2rem'} alignItems={'center'}>
+          <Flex gap={'1.3rem'} mt={'1rem'} alignItems={'center'}>
             <Item icon={bedsvg} value={`${bed} Bed`} />
             <Item icon={bathsvg} value={`${bath} Bath`} />
             <Item icon={sqfeet} value={`${squareFeet} Sqft`} />
