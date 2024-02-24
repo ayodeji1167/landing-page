@@ -15,6 +15,7 @@ import {
   LocationComp,
 } from '../components/propertieslisting/PropertyCard';
 import { formatNumber } from '@/utils/formatNumber';
+import SimilarProperties from '../components/SimilarProperties';
 export default function page({ params }: any) {
   const currentProperty = properties.find((item) => item.id === params.id);
   return (
@@ -95,6 +96,10 @@ export default function page({ params }: any) {
             - This is important when you are filling the contact us information
           </Text>
         </Flex>
+
+        <Box>
+          <SimilarProperties />
+        </Box>
       </SizeWrapper>
     </Box>
   );
