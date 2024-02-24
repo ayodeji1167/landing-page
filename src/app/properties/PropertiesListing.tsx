@@ -5,6 +5,7 @@ import GridItem from '@/components/Ui/chakra/GridItem';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import { properties } from '@/data/propertiesLists';
 import PropertyCard from './components/propertieslisting/PropertyCard';
+import Pagination from './components/propertieslisting/Pagination';
 export default function PropertiesListing() {
   return (
     <Box mt={'3.7rem'}>
@@ -18,6 +19,7 @@ export default function PropertiesListing() {
           }}
           gap={'1.5rem'}
           rowGap={'3rem'}
+          mb={'5rem'}
         >
           {properties.map((item, index) => (
             <GridItem key={index}>
@@ -25,6 +27,7 @@ export default function PropertiesListing() {
             </GridItem>
           ))}
         </Grid>
+        <Pagination />
       </SizeWrapper>
     </Box>
   );
