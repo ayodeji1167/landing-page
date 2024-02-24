@@ -1,7 +1,7 @@
 import React from 'react';
 import Filter from './Filter';
 import PropertiesListing from './PropertiesListing';
-import TopBanner from './TopBanner';
+import TopBanner from '../../components/TopBanner';
 
 export default function page() {
   return (

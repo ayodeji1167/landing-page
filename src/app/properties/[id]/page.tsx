@@ -6,7 +6,7 @@ import Text from '@/components/Ui/chakra/Text';
 import Stack from '@/components/Ui/chakra/Stack';
 import Image from '@/components/Ui/chakra/Image';
 import Button from '@/components/Ui/chakra/Button';
-import TopBanner from '../TopBanner';
+import TopBanner from '../../../components/TopBanner';
 import { properties } from '@/data/propertiesLists';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import bedsvg from '@/assets/svg/bed.svg';
