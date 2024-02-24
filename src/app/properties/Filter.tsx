@@ -1,14 +1,14 @@
 'use client';
 
 import { Box, Button, Flex } from '@chakra-ui/react';
-import SearchInput from './components/SearchInput';
+import SearchInput from './components/filter/SearchInput';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
-import InterestedIn from './components/InterestedIn';
-import PropertyType from './components/PropertyType';
-import Bedroom from './components/Bedroom';
-import Price from './components/Price';
-import OtherFilter from './components/OtherFilter';
-import PopularSearches from './components/PopularSearches';
+import InterestedIn from './components/filter/InterestedIn';
+import PropertyType from './components/filter/PropertyType';
+import Bedroom from './components/filter/Bedroom';
+import Price from './components/filter/Price';
+import OtherFilter from './components/filter/OtherFilter';
+import PopularSearches from './components/filter/PopularSearches';
 
 export default function Filter() {
   return (

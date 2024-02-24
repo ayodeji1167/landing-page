@@ -11,8 +11,8 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import Trigger from './Trigger';
 import { propertyType } from '@/data/propertyType';
+import Trigger from './Trigger';
 
 export default function PropertyType() {
   const { onOpen, onClose, isOpen } = useDisclosure();
