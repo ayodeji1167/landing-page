@@ -10,13 +10,13 @@ export default function Trigger({ name }: { name: string }) {
       border={'1px solid #A2A5AB'}
       alignItems={'center'}
       color={'#A2A5AB'}
-      gap={'1rem'}
+      gap={'1.3rem'}
       fontWeight={400}
       fontSize={'14px'}
       cursor={'pointer'}
     >
       <Text>{name}</Text>
-      <RiArrowDownSLine />
+      <RiArrowDownSLine size={'1rem'} />
     </Flex>
   );
 }

@@ -47,6 +47,14 @@ export const Button: ComponentDefaultProps = {
         bgColor: 'white',
       },
     },
+    ghost: {
+      _focus: {
+        bgColor: 'transparent',
+      },
+      _hover: {
+        bgColor: 'transparent',
+      },
+    },
 
     solid: {
       color: 'white',

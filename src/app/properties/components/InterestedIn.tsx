@@ -30,7 +30,7 @@ export default function InterestedIn() {
         p={'.5rem'}
         w={'17rem'}
         rounded={'1rem'}
-        border="none" // Remove the border
+        border="none"
         boxShadow="0px 1px 2px 0px #0000001A, 0px 4px 4px 0px #00000017, 0px 9px 5px 0px #0000000D, 0px 15px 6px 0px #00000003, 0px 24px 7px 0px #00000000, 0px 1px 0px 0px #6867671A, 0px -4px 4px 0px #0000001A" // Apply the specified box shadows
       >
         <PopoverArrow />
