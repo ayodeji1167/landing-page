@@ -79,8 +79,22 @@ export default function page({ params }: any) {
           >
             About this property
           </Text>
-          <Text color={'#424955'} fontWeight={400} fontSize={'1.2rem'}>{currentProperty?.description}</Text>
+          <Text
+            mb={'1rem'}
+            color={'#424955'}
+            fontWeight={400}
+            fontSize={'1.2rem'}
+          >
+            {currentProperty?.description}
+          </Text>
         </Box>
+
+        <Flex fontSize={'1.2rem'} fontWeight={'600'}>
+          <Text color={'#1B2432'}>Property ID: {currentProperty?.id}</Text>{' '}
+          <Text color={'#3943B7'}>
+            - This is important when you are filling the contact us information
+          </Text>
+        </Flex>
       </SizeWrapper>
     </Box>
   );
