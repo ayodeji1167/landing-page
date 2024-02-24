@@ -3,7 +3,9 @@ import SimpleGrid from '@/components/Ui/chakra/SimpleGrid';
 import GridItem from '@/components/Ui/chakra/GridItem';
 import Flex from '@/components/Ui/chakra/Flex';
 import Text from '@/components/Ui/chakra/Text';
+import Stack from '@/components/Ui/chakra/Stack';
 import Image from '@/components/Ui/chakra/Image';
+import Button from '@/components/Ui/chakra/Button';
 import TopBanner from '../TopBanner';
 import { properties } from '@/data/propertiesLists';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
@@ -95,6 +97,25 @@ export default function page({ params }: any) {
           <Text color={'#3943B7'}>
             - This is important when you are filling the contact us information
           </Text>
+        </Flex>
+
+        <Flex justifyContent={'space-between'} mt={'1.7rem'}>
+          <Stack spacing={'.2rem'}>
+            <Text textTransform={'uppercase'} variant={'subHeading'}>
+              Ready to Make This Property Yours?{' '}
+            </Text>
+            <Text color={'#424955'}>
+              Contact Us Today to Schedule a Viewing or Learn More!{' '}
+            </Text>
+          </Stack>
+          <Button
+            fontSize={'1.2rem'}
+            minW={'12rem'}
+            rounded={'1.3rem'}
+            h={'auto'}
+          >
+            Contact Us Now
+          </Button>
         </Flex>
 
         <Box>
