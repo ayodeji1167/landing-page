@@ -3,12 +3,18 @@ import Box from '@/components/Ui/chakra/Box';
 import Text from '@/components/Ui/chakra/Text';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 
-export default function TopBanner({ name }: { name?: string }) {
+export default function TopBanner({
+  name,
+  fontSize,
+}: {
+  name?: string;
+  fontSize?: string;
+}) {
   return (
     <Box bg={'#510C23'} py={'2.3rem'}>
       <SizeWrapper>
         <Text
-          fontSize={'2rem'}
+          fontSize={fontSize || '2rem'}
           textAlign={'center'}
           as={'h1'}
           fontFamily={'heading'}

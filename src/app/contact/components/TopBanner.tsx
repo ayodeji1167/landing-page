@@ -9,7 +9,7 @@ export default function TopBanner() {
       <SizeWrapper>
         <Text
           mb={'0.5rem'}
-          fontSize={'2rem'}
+          fontSize={'2.7rem'}
           textAlign={'center'}
           as={'h1'}
           fontFamily={'heading'}

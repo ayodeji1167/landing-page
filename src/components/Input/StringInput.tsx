@@ -22,17 +22,20 @@ export default function StringInput(props: StringInputProps) {
       <FormLabel
         requiredIndicator={<abbr title="required field"></abbr>}
         fontFamily={'body'}
-        fontWeight={'semibold'}
-        fontSize={'15px'}
+        fontWeight={'600'}
+        fontSize={'1rem'}
         {...props.formLabelProps}
-        mb={{ base: '6px', md: 'px' }}
+        mb={{ base: '6px', md: '0.5rem' }}
       >
         {props.formControlProps?.label}
       </FormLabel>
       <Input
-        _placeholder={{ color: '#CACACA' }}
+        _placeholder={{ color: '#424955' }}
         {...props.inputProps}
         errorBorderColor="crimson"
+        h={'3rem'}
+        rounded={'1.2rem'}
+        border="1px solid #636D79"
       />
       {props?.errorMessage && props?.touched && (
         <Text fontSize={'12px'} color={'red'}>

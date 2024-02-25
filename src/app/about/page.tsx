@@ -9,7 +9,10 @@ import NextStep from '@/components/NextStep/NextStep';
 export default function page() {
   return (
     <Box>
-      <TopBanner name="Meet BATs: Your Real Estate Partners" />
+      <TopBanner
+        fontSize="2.7rem"
+        name="Meet BATs: Your Real Estate Partners"
+      />
       <SizeWrapper>
         <OurStory />
         <OurTeam />
