@@ -1,8 +1,8 @@
 import GetToKnow from '@/components/HomePage/GetToKnow/GetToKnow';
 import Hero from '@/components/HomePage/Hero/Hero';
-import NextStep from '@/components/HomePage/Hero/NextStep';
+import NextStep from '@/components/NextStep/NextStep';
 import OurOfferings from '@/components/HomePage/OurOfferings/OurOfferings';
-import Testimonial from '@/components/HomePage/Testimonial/Testimonial';
+import Testimonial from '@/components/Testimonial/Testimonial';
 import Box from '@/components/Ui/chakra/Box';
 
 export default function Home() {
@@ -11,8 +11,9 @@ export default function Home() {
       <Hero />
       <GetToKnow />
       <OurOfferings />
-      <Testimonial />
-      <NextStep />
+
+      <Testimonial background="white" />
+      <NextStep background="rgba(243, 232, 235, 1)" />
     </Box>
   );
 }

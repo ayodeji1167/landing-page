@@ -4,6 +4,7 @@ import GridItem from '@/components/Ui/chakra/GridItem';
 import Image from '@/components/Ui/chakra/Image';
 import Text from '@/components/Ui/chakra/Text';
 import { team } from '@/data/team';
+
 export default function OurTeam() {
   return (
     <Box mt={'6rem'}>

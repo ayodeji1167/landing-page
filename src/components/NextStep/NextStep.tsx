@@ -8,9 +8,9 @@ import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import img from '@/assets/nextstep.png';
 import { Button } from '@chakra-ui/react';
 
-export default function NextStep() {
+export default function NextStep({ background }: { background: string }) {
   return (
-    <Box bg={'rgba(243, 232, 235, 1)'} py={'6rem'}>
+    <Box bg={background} py={'6rem'}>
       <SizeWrapper>
         <Flex gap={'2.5rem'} alignItems={'center'}>
           <Box flex={1} h={'25rem'}>

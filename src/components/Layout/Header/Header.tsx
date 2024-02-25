@@ -13,7 +13,7 @@ export default function Header() {
       <SizeWrapper>
         <Flex h={'5rem'} alignItems={'center'} justifyContent={'space-between'}>
           <Box w={'4rem'} cursor={'pointer'}>
-            <Logo />
+            <Logo to="/" />
           </Box>
           <Flex alignItems={'center'} gap={'2.3rem'}>
             <NavItem link="/" name="Home" />

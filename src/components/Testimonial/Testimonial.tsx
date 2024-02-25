@@ -19,11 +19,11 @@ import quote from '@/assets/quote.png';
 import { Image } from '@chakra-ui/react';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
-export default function Testimonial() {
+export default function Testimonial({ background }: { background: string }) {
   const prevButton = useRef<any>(null);
   const nextButton = useRef<any>(null);
   return (
-    <Box py={'5rem'}>
+    <Box background={background} py={'5rem'}>
       <SizeWrapper>
         <Text
           fontWeight={700}
