@@ -13,8 +13,6 @@ export default function OurStory() {
         templateColumns={{
           base: 'repeat(2, 1fr)',
           md: 'repeat(2, 1fr)',
-          lg: 'repeat(2, 1fr)',
-          xl: 'repeat(2, 1fr)',
         }}
         gap={'1.5rem'}
         rowGap={'3rem'}
