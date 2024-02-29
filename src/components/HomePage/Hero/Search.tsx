@@ -27,7 +27,7 @@ export default function Search() {
           boxShadow: 'none',
         }}
       />
-      <Button display={{ base: 'none', md: 'block' }} px={'3rem'}>
+      <Button display={{ base: 'none', md: 'flex' }} px={'3rem'}>
         Search
       </Button>
     </Flex>

@@ -44,10 +44,13 @@ export default function Hero() {
         <Center mt={'2.5rem'}>
           <Search />
         </Center>
-        <Box py={'.5rem'} mt={'2rem'}>
+        <Box display={{ base: 'none', md: 'block' }} py={'.5rem'} mt={'2rem'}>
           <ImageSlider />
         </Box>
       </SizeWrapper>
+      <Box display={{ base: 'block', md: 'none' }} py={'.5rem'} mt={'2rem'}>
+        <ImageSlider />
+      </Box>
     </Box>
   );
 }

@@ -7,7 +7,7 @@ import Box from '@/components/Ui/chakra/Box';
 
 export default function Home() {
   return (
-    <Box bg={'yellow'} overflow={'hidden'}>
+    <Box overflow={'hidden'}>
       <Hero />
       <GetToKnow />
       <OurOfferings />
