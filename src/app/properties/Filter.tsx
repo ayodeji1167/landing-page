@@ -14,7 +14,7 @@ export default function Filter() {
   return (
     <Box pt={'3.2rem'}>
       <SizeWrapper>
-        <Flex gap={'1.5rem'} alignItems={'center'}>
+        <Flex gap={'1.5rem'} alignItems={'center'} flexWrap={'wrap'}>
           <SearchInput />
           <InterestedIn />
           <PropertyType />
