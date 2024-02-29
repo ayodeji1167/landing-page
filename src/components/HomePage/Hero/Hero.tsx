@@ -8,28 +8,33 @@ import ImageSlider from './ImageSlider';
 
 export default function Hero() {
   return (
-    <Box bg={'primary.700'} pt={'8rem'} pb={'1rem'} position={'relative'}>
+    <Box
+      bg={'primary.700'}
+      pt={{ base: '5rem', md: '8rem' }}
+      pb={'1rem'}
+      position={'relative'}
+    >
       <SizeWrapper>
-        <Center flexDir={'column'} gap={'1rem'}>
+        <Center flexDir={'column'} gap={{ base: '.8rem', md: '1rem' }}>
           <Text
             textTransform={'uppercase'}
             fontWeight={'700'}
             as={'h1'}
-            fontSize={'3.2rem'}
+            fontSize={{ base: '1.2rem', md: '3.2rem' }}
+            lineHeight={{ base: '1.5rem', md: '3.2rem' }}
             textAlign={'center'}
             color={'white'}
             fontFamily={'heading'}
-            lineHeight={'3.25rem'}
             maxW={'60rem'}
           >
             Discover Your Dream Home in Dubai with BATs Properties
           </Text>
           <Text
-            lineHeight={'1.5rem'}
+            lineHeight={{ base: '1rem', md: '1.5rem' }}
             align={'center'}
             maxW={'40rem'}
             color={'white'}
-            fontSize={'1.1rem'}
+            fontSize={{ base: '0.8rem', md: '1.1rem' }}
           >
             Explore our diverse range of residential and commercial properties,
             crafted to elevate your living and business experiences
