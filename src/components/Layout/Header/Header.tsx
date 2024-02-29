@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Flex from '@/components/Ui/chakra/Flex';
 import Box from '@/components/Ui/chakra/Box';
@@ -7,16 +8,28 @@ import Link from 'next/link';
 import NavItem from './NavItem';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import { IoIosMenu } from 'react-icons/io';
+import MobileHeader from './MobileHeader';
+import { LiaTimesSolid } from 'react-icons/lia';
+
+import { useDisclosure } from '@chakra-ui/react';
 export default function Header() {
+  const { isOpen, onToggle } = useDisclosure();
   return (
-    <header>
+    <header style={{ position: 'relative' }}>
       <SizeWrapper>
-        <Flex h={'5rem'} alignItems={'center'} justifyContent={'space-between'}>
+        <Flex
+          bg={'white'}
+          zIndex={20}
+          position={'relative'}
+          h={'5rem'}
+          alignItems={'center'}
+          justifyContent={'space-between'}
+        >
           <Box w={'4rem'} cursor={'pointer'}>
             <Logo to="/" />
           </Box>
           <Flex
-            display={{ base: 'none', md: 'block' }}
+            display={{ base: 'none', md: 'flex' }}
             alignItems={'center'}
             gap={'2.3rem'}
           >
@@ -31,10 +44,32 @@ export default function Header() {
             </Link>
           </Box>
           <Box display={{ base: 'block', md: 'none' }}>
-            <IoIosMenu cursor={'pointer'} size={'2.2rem'} />
+            {isOpen ? (
+              <LiaTimesSolid
+                onClick={onToggle}
+                cursor={'pointer'}
+                size={'2.2rem'}
+              />
+            ) : (
+              <IoIosMenu
+                onClick={onToggle}
+                cursor={'pointer'}
+                size={'2.2rem'}
+              />
+            )}
           </Box>
         </Flex>
       </SizeWrapper>
+      <Box
+        display={{ base: 'block', md: 'none' }}
+        zIndex={'10'}
+        position={'absolute'}
+        top={isOpen ? 0 : '-100vh'}
+        transition={'1s all ease'}
+        left={'0'}
+      >
+        <MobileHeader onToggle={onToggle} />
+      </Box>
     </header>
   );
 }
