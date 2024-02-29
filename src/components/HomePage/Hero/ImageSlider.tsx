@@ -109,7 +109,7 @@ export default function ImageSlider() {
                 },
               }}
               justifyContent={'space-between'}
-              py={'7rem'}
+              py={{ base: '5rem', md: '7rem' }}
             >
               <Text
                 position={'relative'}
@@ -118,12 +118,12 @@ export default function ImageSlider() {
                 fontWeight={'700'}
                 as={'h2'}
                 fontFamily={'heading'}
-                fontSize={'1.8rem'}
+                fontSize={{ base: '1.2rem', md: '1.8rem' }}
                 textAlign={'center'}
               >
                 {item.location}
               </Text>
-              <Button>More Info</Button>
+              <Button minW={'8rem'}>More Info</Button>
             </Center>
           )}
         </SwiperSlide>
