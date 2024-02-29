@@ -8,7 +8,7 @@ export default function Search() {
       rounded={'3rem'}
       bg={'#F3E8EB'}
       alignItems={'center'}
-      h={'3.6rem'}
+      h={{ base: '2.5rem', md: '3.6rem' }}
       width={'30rem'}
       overflow={'hidden'}
       pl={'1rem'}
@@ -20,14 +20,16 @@ export default function Search() {
         boxShadow={'none'}
         _placeholder={{
           color: 'gray.300',
-          fontsize: '14px',
+          fontsize: { base: '12px', md: '14px' },
         }}
         outline={'none'}
         _focus={{
           boxShadow: 'none',
         }}
       />
-      <Button px={'3rem'}>Search</Button>
+      <Button display={{ base: 'none', md: 'block' }} px={'3rem'}>
+        Search
+      </Button>
     </Flex>
   );
 }
