@@ -13,10 +13,10 @@ import Link from 'next/link';
 export function Item({ icon, value }: { icon: any; value: string }) {
   return (
     <Flex color={'#424955'} gap={'.3rem'} alignItems={'center'}>
-      <Box>
-        <Image alt={value} src={icon.src} />
+      <Box w={{ base: '1rem', md: '1.3rem' }}>
+        <Image w={'100%'} h={'100%'} alt={value} src={icon.src} />
       </Box>
-      <Text fontSize={'14px'}>{value}</Text>
+      <Text fontSize={{ base: '.7rem', md: '.8rem' }}>{value}</Text>
     </Flex>
   );
 }
@@ -24,8 +24,10 @@ export function Item({ icon, value }: { icon: any; value: string }) {
 export function LocationComp({ location }: { location?: string }) {
   return (
     <Flex gap={'.5rem'} alignItems={'center'}>
-      <Image alt="location" src={locationImg.src} />
-      <Text fontSize={'14px'} color="#424955">
+      <Box w={{ base: '1rem', md: '1.3rem' }}>
+        <Image w={'100%'} h={'100%'} alt="location" src={locationImg.src} />
+      </Box>
+      <Text fontSize={{ base: '.7rem', md: '.8rem' }} color="#424955">
         {location}
       </Text>
     </Flex>
@@ -61,11 +63,15 @@ export default function PropertyCard(props: IProperty) {
             objectFit={'cover'}
           />
         </Box>
-        <Box p={'1.4rem'}>
-          <Text fontFamily={'heading'} fontWeight={700} fontSize={'1.2rem'}>
+        <Box p={{ base: '1rem', md: '1.4rem' }}>
+          <Text
+            fontFamily={'heading'}
+            fontWeight={700}
+            fontSize={{ base: '1rem', md: '1.2rem' }}
+          >
             {name}
           </Text>
-          <Box my={'1rem'}>
+          <Box my={{ base: '.8rem', md: '1rem' }}>
             <LocationComp location={location} />
           </Box>
 
@@ -76,7 +82,7 @@ export default function PropertyCard(props: IProperty) {
           </Flex>
 
           <Flex
-            mt={'2rem'}
+            mt={{ base: '1.8rem', md: '2rem' }}
             alignItems={'center'}
             justifyContent={'space-between'}
           >
