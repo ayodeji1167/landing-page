@@ -6,7 +6,7 @@ export default function Trigger({ name }: { name: string }) {
     <Flex
       h={{ base: '2.5rem', md: '3rem' }}
       borderRadius={'1.2rem'}
-      px={'1rem'}
+      px={{ base: '.7rem', md: '1rem' }}
       border={'1px solid #A2A5AB'}
       alignItems={'center'}
       color={'#A2A5AB'}
