@@ -13,10 +13,10 @@ export default function TopBanner({
   description?: string;
 }) {
   return (
-    <Box bg={'#510C23'} py={'2.3rem'}>
+    <Box bg={'#510C23'} py={{ base: '2rem', md: '2.3rem' }}>
       <SizeWrapper>
         <Text
-          fontSize={fontSize || '2rem'}
+          fontSize={{ base: fontSize || '1.2rem', md: fontSize || '2rem' }}
           textAlign={'center'}
           as={'h1'}
           fontFamily={'heading'}
