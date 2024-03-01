@@ -27,10 +27,10 @@ export default function page({ params }: any) {
         <SimpleGrid
           mt={'3rem'}
           mb={'2rem'}
-          templateRows="repeat(2, 18rem)"
-          gap={'1.5rem'}
-          row={2}
-          columns={4}
+          templateRows={{ base: 'repeat(2,8rem)', md: 'repeat(2, 18rem)' }}
+          gap={{ base: '.8rem', md: '1.5rem' }}
+          row={{ base: 4, md: 2 }}
+          columns={{ base: 2, md: 4 }}
         >
           <GridItem colSpan={2} rowSpan={2}>
             <Image
@@ -43,7 +43,7 @@ export default function page({ params }: any) {
           </GridItem>
 
           {currentProperty?.images?.otherImages?.map((item) => (
-            <GridItem key={item.src}>
+            <GridItem key={item.src} h={{ base: '10rem', md: '100%' }}>
               <Image
                 w={'100%'}
                 h={'100%'}
