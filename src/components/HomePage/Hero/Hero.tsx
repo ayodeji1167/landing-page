@@ -48,7 +48,7 @@ export default function Hero() {
           <ImageSlider />
         </Box>
       </SizeWrapper>
-      <Box display={{ base: 'block', md: 'none' }} py={'.5rem'} mt={'2rem'}>
+      <Box display={{ base: 'block', md: 'none' }} py={'.5rem'}>
         <ImageSlider />
       </Box>
     </Box>

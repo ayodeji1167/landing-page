@@ -20,7 +20,7 @@ export default function Search() {
         boxShadow={'none'}
         _placeholder={{
           color: 'gray.300',
-          fontsize: { base: '12px', md: '14px' },
+          fontSize: { base: '12px', md: '14px' },
         }}
         outline={'none'}
         _focus={{
