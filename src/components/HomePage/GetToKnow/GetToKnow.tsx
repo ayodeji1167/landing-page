@@ -41,7 +41,7 @@ export default function GetToKnow() {
               lineHeight={{ base: '1rem', md: '1.4rem' }}
               fontWeight={'400'}
             >
-              {` At BATs Properties, we are dedicated to redefining the real estate
+              {`At BATs Properties, we are dedicated to redefining the real estate
               experience in Dubai. With a passion for excellence and a
               commitment to integrity, we strive to guide our clients through
               every step of their journey to homeownership. Our team of
