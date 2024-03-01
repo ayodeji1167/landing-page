@@ -17,7 +17,7 @@ export const Button: ComponentDefaultProps = {
     primary: {
       color: 'white',
       bgColor: 'primary.500',
-      width: { md: '823px' },
+      width: { base: '10rem', md: '823px' },
       _focus: {
         boxShadow:
           '28px 40px 20px rgba(24, 19, 162, 0.03), 16px 23px 17px rgba(24, 19, 162, 0.1), 7px 10px 12px rgba(24, 19, 162, 0.17), 2px 3px 7px rgba(24, 19, 162, 0.2), 0px 0px 0px rgba(24, 19, 162, 0.2)',

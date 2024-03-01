@@ -39,7 +39,7 @@ export default function InterestedIn() {
           <Text
             fontFamily={'heading'}
             fontWeight={'700'}
-            fontSize={'1.3rem'}
+            fontSize={{ base: '.9rem', md: '1.3rem' }}
             mb={'.7rem'}
           >
             Interested to:
@@ -47,11 +47,11 @@ export default function InterestedIn() {
 
           <Flex
             border="1px solid #CD9FAE"
-            rounded={'1.35rem'}
-            h={'3.3rem'}
+            rounded={{ base: '1rem', md: '1.35rem' }}
+            h={{ base: '2.9rem', md: '3.3rem' }}
             alignItems={'Center'}
             justifyContent={'space-between'}
-            px={'1rem'}
+            px={{ base: '.5rem', md: '1rem' }}
             mb={'1.8rem'}
           >
             <Center
@@ -61,8 +61,9 @@ export default function InterestedIn() {
               cursor={'pointer'}
               py={'.3rem'}
               px={'1.8rem'}
-              rounded={'1.3rem'}
+              rounded={{ base: '.8rem', md: '1.3rem' }}
               onClick={() => setInterest('buy')}
+              fontSize={{ base: '.8rem', md: '1rem' }}
             >
               Buy
             </Center>
@@ -73,8 +74,9 @@ export default function InterestedIn() {
               cursor={'pointer'}
               py={'.3rem'}
               px={'1.8rem'}
-              rounded={'1.3rem'}
+              rounded={{ base: '.8rem', md: '1.3rem' }}
               onClick={() => setInterest('rent')}
+              fontSize={{ base: '.8rem', md: '1rem' }}
             >
               Rent
             </Center>
