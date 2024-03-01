@@ -8,7 +8,7 @@ import SocialFooter from './SocialFooter';
 
 export default function Footer() {
   return (
-    <Box color={'white'} bg={'#510C23'}>
+    <Box color={'white'} bg={'#510C23'} maxW={'100vw'} overflow={'hidden'}>
       <SizeWrapper>
         <Flex py={'6rem'} gap={'10rem'} alignItems={'flex-start'}>
           <Box>

@@ -32,3 +32,21 @@
   border-radius: 100%;
   opacity: 1;
 }
+/* Mobile styles (applies to screens up to 767px wide) */
+@media only screen and (max-width: 767px) {
+  .testimonial-swiper .swiper-pagination {
+  }
+  .testimonial-swiper {
+    height: 18rem;
+  }
+  .testimonial-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .testimonial-swiper .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    border: 3.5px solid rgba(205, 159, 174, 1);
+  }
+}
