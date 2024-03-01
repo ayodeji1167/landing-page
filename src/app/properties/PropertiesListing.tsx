@@ -17,7 +17,7 @@ export default function PropertiesListing() {
           }}
           gap={'1.5rem'}
           rowGap={'3rem'}
-          mb={'5rem'}
+          mb={{ base: '3.7rem', md: '5rem' }}
         >
           {properties.map((item, index) => (
             <GridItem key={index}>

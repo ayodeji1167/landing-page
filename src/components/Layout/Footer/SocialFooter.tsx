@@ -8,7 +8,7 @@ import { FaLinkedinIn } from 'react-icons/fa6';
 
 export function Socials() {
   return (
-    <Flex gap={'1rem'} alignItems={'center'}>
+    <Flex gap={{ base: '2rem', md: '1rem' }} alignItems={'center'}>
       <FaTwitter />
       <FaLinkedinIn />
       <FaFacebookF />
