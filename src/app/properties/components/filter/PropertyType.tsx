@@ -14,6 +14,51 @@ import React, { useState } from 'react';
 import { propertyType } from '@/data/propertyType';
 import Trigger from './Trigger';
 
+export function PropertyTypeItem({
+  setType,
+  type,
+}: {
+  setType: any;
+  type: any;
+}) {
+  return (
+    <>
+      <Text
+        fontFamily={'heading'}
+        fontWeight={'700'}
+        fontSize={{ base: '.9rem', md: '1.3rem' }}
+        mb={'.7rem'}
+      >
+        Property type:
+      </Text>
+
+      <Flex flexWrap={'wrap'} gap={{ base: '.6rem', md: '.8rem' }}>
+        {propertyType.map((item) => {
+          const isCurrentType = item.value === type;
+          return (
+            <Center
+              border={
+                isCurrentType ? '1px solid #CD9FAE' : ' 1px solid #A2A5AB'
+              }
+              bg={isCurrentType ? '#F3E8EB' : 'transparent'}
+              fontWeight={isCurrentType ? '600' : '400'}
+              color={isCurrentType ? 'primary.500' : 'black'}
+              py={'.3rem'}
+              px={{ base: '1rem', md: '1.8rem' }}
+              rounded={'1.3rem'}
+              key={item.name}
+              onClick={() => setType(item.value)}
+              cursor={'pointer'}
+              fontSize={{ base: '.7rem', md: '.9rem' }}
+            >
+              {item.name}
+            </Center>
+          );
+        })}
+      </Flex>
+    </>
+  );
+}
 export default function PropertyType() {
   const { onOpen, onClose, isOpen } = useDisclosure();
   const [type, setType] = useState<string>('any');
@@ -35,38 +80,7 @@ export default function PropertyType() {
         <PopoverArrow />
 
         <PopoverBody>
-          <Text
-            fontFamily={'heading'}
-            fontWeight={'700'}
-            fontSize={'1.3rem'}
-            mb={'.7rem'}
-          >
-            Property type:
-          </Text>
-
-          <Flex flexWrap={'wrap'} gap={'.8rem'}>
-            {propertyType.map((item) => {
-              const isCurrentType = item.value === type;
-              return (
-                <Center
-                  border={
-                    isCurrentType ? '1px solid #CD9FAE' : ' 1px solid #A2A5AB'
-                  }
-                  bg={isCurrentType ? '#F3E8EB' : 'transparent'}
-                  fontWeight={isCurrentType ? '600' : '400'}
-                  color={isCurrentType ? 'primary.500' : 'black'}
-                  py={'.3rem'}
-                  px={'1.8rem'}
-                  rounded={'1.3rem'}
-                  key={item.name}
-                  onClick={() => setType(item.value)}
-                  cursor={'pointer'}
-                >
-                  {item.name}
-                </Center>
-              );
-            })}
-          </Flex>
+          <PropertyTypeItem setType={setType} type={type} />
 
           <Flex mt={'1.8rem'} justifyContent={'space-between'}>
             <Button

@@ -14,6 +14,44 @@ import React, { useState } from 'react';
 import Trigger from './Trigger';
 import { baths, bedroom } from '@/data/rooms';
 
+export function BedroomItem({ room, setRoom }: { room: any; setRoom: any }) {
+  return (
+    <>
+      <Text
+        fontFamily={'heading'}
+        fontWeight={'700'}
+        fontSize={{ base: '.9rem', md: '1.3rem' }}
+        mb={'.7rem'}
+      >
+        Bedrooms:
+      </Text>
+      <Flex flexWrap={'wrap'} gap={'.8rem'}>
+        {bedroom.map((item) => {
+          const isCurrentType = item.value === room;
+          return (
+            <Center
+              border={
+                isCurrentType ? '1px solid #CD9FAE' : ' 1px solid #A2A5AB'
+              }
+              bg={isCurrentType ? '#F3E8EB' : 'transparent'}
+              fontWeight={isCurrentType ? '600' : '400'}
+              color={isCurrentType ? 'primary.500' : 'black'}
+              py={'.3rem'}
+              px={'1.8rem'}
+              rounded={'1.3rem'}
+              key={item.name}
+              onClick={() => setRoom(item.value)}
+              cursor={'pointer'}
+              fontSize={{ base: '.7rem', md: '.9rem' }}
+            >
+              {item.name}
+            </Center>
+          );
+        })}
+      </Flex>
+    </>
+  );
+}
 export default function Bedroom() {
   const { onOpen, onClose, isOpen } = useDisclosure();
   const [room, setRoom] = useState<string>('any');
@@ -35,38 +73,8 @@ export default function Bedroom() {
         <PopoverArrow />
 
         <PopoverBody>
-          <Text
-            fontFamily={'heading'}
-            fontWeight={'700'}
-            fontSize={'1.3rem'}
-            mb={'.7rem'}
-          >
-            Bedrooms:
-          </Text>
+          <BedroomItem room={room} setRoom={setRoom} />
 
-          <Flex flexWrap={'wrap'} gap={'.8rem'}>
-            {bedroom.map((item) => {
-              const isCurrentType = item.value === room;
-              return (
-                <Center
-                  border={
-                    isCurrentType ? '1px solid #CD9FAE' : ' 1px solid #A2A5AB'
-                  }
-                  bg={isCurrentType ? '#F3E8EB' : 'transparent'}
-                  fontWeight={isCurrentType ? '600' : '400'}
-                  color={isCurrentType ? 'primary.500' : 'black'}
-                  py={'.3rem'}
-                  px={'1.8rem'}
-                  rounded={'1.3rem'}
-                  key={item.name}
-                  onClick={() => setRoom(item.value)}
-                  cursor={'pointer'}
-                >
-                  {item.name}
-                </Center>
-              );
-            })}
-          </Flex>
           {/* ====================================================================================== */}
           <Text
             fontFamily={'heading'}

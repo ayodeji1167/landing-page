@@ -23,6 +23,7 @@ export default function Price() {
         </Button>
       </PopoverTrigger>
       <PopoverContent
+        mr={{ base: '.6rem', md: '0' }}
         w={{ base: '20rem', md: '26rem' }}
         p={'.5rem'}
         rounded={{ base: '.8rem', md: '1rem' }}
