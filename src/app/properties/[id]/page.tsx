@@ -54,18 +54,33 @@ export default function page({ params }: any) {
             </GridItem>
           ))}
         </SimpleGrid>
-        <Flex justifyContent={'space-between'} alignItems={'center'}>
-          <Flex alignItems={'center'} gap={'1rem'}>
+
+        <Flex
+          justifyContent={'space-between'}
+          direction={{ base: 'column', md: 'row' }}
+          alignItems={{ base: 'flex-start', md: 'center' }}
+        >
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            alignItems={{ base: 'flex-start', md: 'center' }}
+            gap={'1rem'}
+          >
             <LocationComp location={currentProperty?.location} />
-            <Item icon={bedsvg} value={`${currentProperty?.bed} Bed`} />
-            <Item icon={bathsvg} value={`${currentProperty?.bath} Bath`} />
-            <Item icon={sqfeet} value={`${currentProperty?.squareFeet} Sqft`} />
+            <Flex alignItems={'center'} gap={'1rem'}>
+              <Item icon={bedsvg} value={`${currentProperty?.bed} Bed`} />
+              <Item icon={bathsvg} value={`${currentProperty?.bath} Bath`} />
+              <Item
+                icon={sqfeet}
+                value={`${currentProperty?.squareFeet} Sqft`}
+              />
+            </Flex>
           </Flex>
           <Text
             fontFamily={'heading'}
             fontWeight={700}
-            fontSize={'1.9rem'}
+            fontSize={{ base: '1.2rem', md: '1.9rem' }}
             justifySelf={'flex-end'}
+            mt={{ base: '.7rem', md: '0' }}
           >
             Price AED {formatNumber(currentProperty?.price)}
           </Text>
@@ -74,11 +89,11 @@ export default function page({ params }: any) {
         <Box mt={'2rem'}>
           <Text
             textTransform={'uppercase'}
-            mb={'1rem'}
+            mb={{ base: '.3rem', md: '1rem' }}
             as={'h2'}
             fontFamily={'heading'}
             fontWeight={700}
-            fontSize={'2rem'}
+            fontSize={{ base: '1rem', md: '2rem' }}
           >
             About this property
           </Text>
@@ -86,30 +101,41 @@ export default function page({ params }: any) {
             mb={'1rem'}
             color={'#424955'}
             fontWeight={400}
-            fontSize={'1.2rem'}
+            fontSize={{ base: '0.8rem', md: '1.2rem' }}
           >
             {currentProperty?.description}
           </Text>
         </Box>
 
-        <Flex fontSize={'1.2rem'} fontWeight={'600'}>
-          <Text color={'#1B2432'}>Property ID: {currentProperty?.id}</Text>{' '}
-          <Text color={'#3943B7'}>
+        <Text
+          fontSize={{ base: '.9rem', md: '1.2rem' }}
+          fontWeight={'600'}
+          color={'#1B2432'}
+        >
+          Property ID: {currentProperty?.id}{' '}
+          <span style={{ color: '#3943B7' }}>
+            {' '}
             - This is important when you are filling the contact us information
-          </Text>
-        </Flex>
+          </span>{' '}
+        </Text>
 
-        <Flex justifyContent={'space-between'} mt={'1.7rem'}>
+        <Flex
+          justifyContent={'space-between'}
+          direction={{ base: 'column', md: 'row' }}
+          mt={'1.7rem'}
+          alignItems={{ base: 'flex-start', md: 'stretch' }}
+        >
           <Stack spacing={'.2rem'}>
             <Text textTransform={'uppercase'} variant={'subHeading'}>
-              Ready to Make This Property Yours?{' '}
+              Ready to Make This Property Yours?
             </Text>
             <Text color={'#424955'}>
               Contact Us Today to Schedule a Viewing or Learn More!{' '}
             </Text>
           </Stack>
           <Button
-            fontSize={'1.2rem'}
+            mt={{ base: '1rem', md: '0' }}
+            fontSize={{ base: '1rem', md: '1.2rem' }}
             minW={'12rem'}
             rounded={'1.3rem'}
             h={'auto'}
