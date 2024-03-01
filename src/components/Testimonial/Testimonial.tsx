@@ -32,7 +32,7 @@ export default function Testimonial({ background }: { background: string }) {
     }
   );
   return (
-    <Box background={background} py={'5rem'}>
+    <Box background={background} py={{ base: '4rem', md: '5rem' }}>
       <SizeWrapper>
         <Text
           fontWeight={700}
