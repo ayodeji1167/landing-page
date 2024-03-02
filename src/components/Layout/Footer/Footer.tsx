@@ -21,7 +21,7 @@ export default function Footer() {
           alignItems={'flex-start'}
         >
           <GridItem>
-            <Box w={{ base: '7rem', md: '9rem' }}>
+            <Box w={{ base: '6rem', md: '9rem' }}>
               <Logo color="white" />
             </Box>
             <Box mt={'1.2rem'} display={{ base: 'block', md: 'none' }}>

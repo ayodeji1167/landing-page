@@ -16,7 +16,7 @@ export default function TopBanner({
     <Box bg={'#510C23'} py={{ base: '2rem', md: '2.3rem' }}>
       <SizeWrapper>
         <Text
-          fontSize={{ base: fontSize || '1.2rem', md: fontSize || '2rem' }}
+          fontSize={{ base: '1.2rem', md: fontSize || '2rem' }}
           textAlign={'center'}
           as={'h1'}
           fontFamily={'heading'}

@@ -7,7 +7,7 @@ import { team } from '@/data/team';
 
 export default function OurTeam() {
   return (
-    <Box mt={'6rem'}>
+    <Box mt={{base:'2rem',md:'6rem'}}>
       <Box mb={'6rem'}>
         <Text
           mb={'1rem'}
