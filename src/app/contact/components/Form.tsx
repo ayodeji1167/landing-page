@@ -13,15 +13,20 @@ import {
 
 export default function Form() {
   return (
-    <Box pt={'6rem'} pb={'8rem'} maxW={'60%'} mx={'auto'}>
+    <Box
+      pt={{ base: '0rem', md: '6rem' }}
+      pb={{ base: '1.2rem', md: '8rem' }}
+      maxW={{ base: '95%', md: '60%' }}
+      mx={'auto'}
+    >
       <form action="">
         <SimpleGrid
-          mt={'3rem'}
+          mt={{ base: '2.5rem', md: '3rem' }}
           mb={'2.8rem'}
           columnGap={'1.5rem'}
           rowGap={'1.8rem'}
           row={4}
-          columns={2}
+          columns={{ base: 1, md: 2 }}
         >
           <GridItem>
             <StringInput
@@ -52,7 +57,7 @@ export default function Form() {
               }}
             />
           </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={{ base: 1, md: 2 }}>
             <StringInput
               formControlProps={{ label: 'Property ID' }}
               inputProps={{
@@ -61,7 +66,7 @@ export default function Form() {
               }}
             />
           </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={{ base: 1, md: 2 }}>
             <FormLabel
               requiredIndicator={<abbr title="required field"></abbr>}
               fontFamily={'body'}
@@ -78,7 +83,7 @@ export default function Form() {
         </SimpleGrid>
 
         <Center>
-          <Button minW={'10rem'}>Submit</Button>
+          <Button minW={{ base: '100%', md: '10rem' }}>Submit</Button>
         </Center>
       </form>
     </Box>

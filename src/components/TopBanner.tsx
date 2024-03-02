@@ -27,7 +27,14 @@ export default function TopBanner({
           {name}
         </Text>
         {description && (
-          <Text maxW={'35rem'} mx={'auto'} color={'white'} textAlign={'center'}>
+          <Text
+            mt={{ base: '.5rem', md: '.2rem' }}
+            maxW={'35rem'}
+            fontSize={{ base: '.8rem', md: '1rem' }}
+            mx={'auto'}
+            color={'white'}
+            textAlign={'center'}
+          >
             {description}
           </Text>
         )}
