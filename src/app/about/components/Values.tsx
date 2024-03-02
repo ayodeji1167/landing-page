@@ -10,7 +10,7 @@ export default function Values() {
     <Box mb={'6rem'}>
       <Grid
         templateColumns={{
-          base: 'repeat(2, 1fr)',
+          base: 'repeat(1, 1fr)',
           md: 'repeat(2, 1fr)',
         }}
         gap={'1.5rem'}
@@ -26,7 +26,7 @@ export default function Values() {
             alt="image1"
           />
         </GridItem>
-        <GridItem>
+        <GridItem display={{ base: 'none', md: 'block' }}  >
           <Image
             objectFit={'cover'}
             w={'100%'}

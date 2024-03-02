@@ -7,17 +7,17 @@ import { team } from '@/data/team';
 
 export default function OurTeam() {
   return (
-    <Box mt={{base:'2rem',md:'6rem'}}>
-      <Box mb={'6rem'}>
+    <Box mt={{ base: '1.5rem', md: '6rem' }}>
+      <Box mb={{ base: '2.3rem', md: '6rem' }}>
         <Text
-          mb={'1rem'}
-          align={'center'}
+          mb={{ base: '.7rem', md: '1rem' }}
+          align={{ base: 'left', md: 'center' }}
           variant={'subHeading'}
           textTransform={'uppercase'}
         >
           Meet Our Team
         </Text>
-        <Text fontSize={'1.2rem'} color={'#424955'}>
+        <Text fontSize={{ base: '.8rem', md: '1.2rem' }} color={'#424955'}>
           Behind every successful real estate transaction is a dedicated team of
           professionals who are passionate about helping clients achieve their
           goals. Meet the talented individuals who make up the BATs Properties
@@ -32,13 +32,13 @@ export default function OurTeam() {
           base: 'repeat(2, 1fr)',
           md: 'repeat(3, 1fr)',
         }}
-        gap={'1.5rem'}
-        rowGap={'3rem'}
+        gap={{ base: '.8rem', md: '1.5rem' }}
+        rowGap={{ base: '1.2rem', md: '3rem' }}
         mb={'5rem'}
       >
         {team.map((item, index) => (
           <GridItem key={index}>
-            <Box mb={'1.3rem'}>
+            <Box mb={{ base: '.56rem', md: '1.3rem' }}>
               <Image
                 objectFit={'cover'}
                 w={'100%'}
@@ -47,10 +47,10 @@ export default function OurTeam() {
                 alt="image1"
               />
             </Box>
-            <Text fontSize={'14px'} mb={'.6rem'}>
+            <Text fontSize={'14px'} mb={{ base: '0', md: '.6rem' }}>
               {item.firstName} {item.lastName}
             </Text>
-            <Text fontWeight={600} fontSize={'1.2rem'}>
+            <Text fontWeight={600} fontSize={{ base: '.8rem', md: '1.2rem' }}>
               {item.position}
             </Text>
           </GridItem>
