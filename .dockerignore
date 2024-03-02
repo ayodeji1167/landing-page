@@ -1,0 +1,13 @@
+.next
+node_modules
+.env
+Dockerfile
+/dist
+/build
+.dockerignore
+.docker
+.git
+.gitignore
+
+#docker compose
+docker-compose.*
