@@ -34,7 +34,7 @@ export default function OurTeam() {
         }}
         gap={{ base: '.8rem', md: '1.5rem' }}
         rowGap={{ base: '1.2rem', md: '3rem' }}
-        mb={'5rem'}
+        mb={{ base: '2rem', md: '5rem' }}
       >
         {team.map((item, index) => (
           <GridItem key={index}>

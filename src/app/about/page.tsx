@@ -19,7 +19,7 @@ export default function page() {
         <Values />
       </SizeWrapper>
       <Testimonial background="#F3E8EB" />
-      <Box py={'5rem'}>
+      <Box py={{ base: '3rem', md: '5rem' }}>
         <NextStep background="#white" />
       </Box>
     </Box>
