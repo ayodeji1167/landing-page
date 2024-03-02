@@ -12,8 +12,8 @@ const baseStyle = definePartsStyle({
     color: '#424955',
   },
   control: {
-    padding: 3,
-    borderRadius: '7px',
+    padding: { base: 2, md: 3 },
+    borderRadius: { base: '4px', md: '7px' },
     borderWidth: '1px',
     borderColor: '#A2A5AB',
     boxShadow: 'none',

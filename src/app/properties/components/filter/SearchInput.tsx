@@ -9,7 +9,7 @@ export default function SearchInput() {
       borderRadius={'1.2rem'}
       alignItems={'center'}
       px={'.3rem'}
-      h={'3rem'}
+      h={{ base: '2.5rem', md: '3rem' }}
     >
       <CiSearch size={'1.5rem'} />
       <Input
@@ -18,7 +18,7 @@ export default function SearchInput() {
         boxShadow={'none'}
         _placeholder={{
           color: 'gray.200',
-          fontsize: '14px',
+          fontSize: '14px',
         }}
         outline={'none'}
         _focus={{
@@ -26,6 +26,7 @@ export default function SearchInput() {
         }}
         placeholder="Search and select area"
         w={'20rem'}
+        fontSize={{ base: '.8rem', md: '1rem' }}
       />
     </Flex>
   );

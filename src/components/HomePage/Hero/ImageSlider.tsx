@@ -11,7 +11,14 @@ import './slider.css';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import { properties } from './data';
-import { Button, Center, Image, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Center,
+  Image,
+  Text,
+  useBreakpointValue,
+} from '@chakra-ui/react';
+
 export default function ImageSlider() {
   const [hoverStates, setHoverStates] = useState(
     new Array(properties.length).fill(false)
@@ -28,21 +35,44 @@ export default function ImageSlider() {
     updatedStates[index] = false;
     setHoverStates(updatedStates);
   };
+  const height = useBreakpointValue(
+    {
+      base: '20rem',
+      md: '30rem',
+    },
+    {
+      fallback: 'md',
+    }
+  );
   return (
     <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
+      slidesPerView={2}
+      spaceBetween={10}
       pagination={{
         clickable: true,
       }}
       modules={[Pagination]}
       className="mySwiper"
+      breakpoints={{
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
     >
       {properties.map((item, index) => (
         <SwiperSlide
           style={{
             objectFit: 'cover',
-            height: '30rem',
+            height: height,
           }}
           key={item.location + ' ' + index}
           onMouseEnter={() => handleMouseEnter(index)}
@@ -79,7 +109,7 @@ export default function ImageSlider() {
                 },
               }}
               justifyContent={'space-between'}
-              py={'7rem'}
+              py={{ base: '5rem', md: '7rem' }}
             >
               <Text
                 position={'relative'}
@@ -88,12 +118,12 @@ export default function ImageSlider() {
                 fontWeight={'700'}
                 as={'h2'}
                 fontFamily={'heading'}
-                fontSize={'1.8rem'}
+                fontSize={{ base: '1.2rem', md: '1.8rem' }}
                 textAlign={'center'}
               >
                 {item.location}
               </Text>
-              <Button>More Info</Button>
+              <Button minW={'8rem'}>More Info</Button>
             </Center>
           )}
         </SwiperSlide>

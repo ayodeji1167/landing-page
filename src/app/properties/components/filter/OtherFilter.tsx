@@ -10,12 +10,17 @@ import {
   Input,
   useDisclosure,
   Checkbox,
+  Box,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import Trigger from './Trigger';
+import { PropertyTypeItem } from './PropertyType';
+import { BedroomItem } from './Bedroom';
 
 export default function OtherFilter() {
   const { onOpen, onClose, isOpen } = useDisclosure();
+  const [type, setType] = useState<string>('any');
+  const [room, setRoom] = useState<string>('any');
 
   return (
     <Popover onOpen={onOpen} onClose={onClose} isOpen={isOpen}>
@@ -25,7 +30,7 @@ export default function OtherFilter() {
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        w={'26rem'}
+        w={{ base: '100vw', md: '26rem' }}
         p={'.5rem'}
         rounded={'1rem'}
         border="none"
@@ -34,10 +39,22 @@ export default function OtherFilter() {
         <PopoverArrow />
 
         <PopoverBody>
+          <Box display={{ base: 'block', md: 'none' }}>
+            <Box mb={'1rem'}>
+              <PropertyTypeItem setType={setType} type={type} />
+            </Box>
+            <Box mb={'1rem'}>
+              <BedroomItem setRoom={setRoom} room={room} />
+            </Box>
+            {/* <Box mb={'1rem'}>
+              <PropertyTypeItem setType={setType} type={type} />
+            </Box> */}
+          </Box>
+
           <Text
             fontFamily={'heading'}
             fontWeight={'700'}
-            fontSize={'1.3rem'}
+            fontSize={{ base: '.9rem', md: '1.3rem' }}
             mb={'.7rem'}
           >
             Area (Sqft)
@@ -47,7 +64,7 @@ export default function OtherFilter() {
             <Input
               placeholder="Min"
               border={'1px solid #A2A5AB !important'}
-              h={'3rem'}
+              h={{ base: '2.5rem', md: '3rem' }}
               rounded={'1.2rem'}
               boxShadow={'none'}
               outline={'none'}
@@ -56,14 +73,15 @@ export default function OtherFilter() {
               }}
               _placeholder={{
                 color: 'gray.300',
-                fontsize: '14px',
+                fontSize: '14px',
                 opacity: '0.5',
               }}
+              fontSize={{ base: '.7rem', md: '.9rem' }}
             />
             <Input
               placeholder="Max"
               border={'1px solid #A2A5AB !important'}
-              h={'3rem'}
+              h={{ base: '2.5rem', md: '3rem' }}
               rounded={'1.2rem'}
               boxShadow={'none'}
               outline={'none'}
@@ -72,9 +90,10 @@ export default function OtherFilter() {
               }}
               _placeholder={{
                 color: 'gray.300',
-                fontsize: '14px',
+                fontSize: '14px',
                 opacity: '0.5',
               }}
+              fontSize={{ base: '.7rem', md: '.9rem' }}
             />
           </Flex>
 
@@ -82,7 +101,7 @@ export default function OtherFilter() {
           <Text
             fontFamily={'heading'}
             fontWeight={'700'}
-            fontSize={'1.3rem'}
+            fontSize={{ base: '.9rem', md: '1.3rem' }}
             mb={'.7rem'}
             mt={'1.2rem'}
           >
@@ -90,19 +109,19 @@ export default function OtherFilter() {
           </Text>
 
           <Flex flexWrap={'wrap'} gap={'1rem'}>
-            <Checkbox size={'md'} colorScheme="primary">
+            <Checkbox size={{ base: 'sm', md: 'md' }} colorScheme="primary">
               Reduced price
             </Checkbox>
-            <Checkbox size={'md'} colorScheme="primary">
+            <Checkbox size={{ base: 'sm', md: 'md' }} colorScheme="primary">
               Beachfront
             </Checkbox>
-            <Checkbox size={'md'} colorScheme="primary">
+            <Checkbox size={{ base: 'sm', md: 'md' }} colorScheme="primary">
               Waterfront{' '}
             </Checkbox>
-            <Checkbox size={'md'} colorScheme="primary">
+            <Checkbox size={{ base: 'sm', md: 'md' }} colorScheme="primary">
               Furnished{' '}
             </Checkbox>
-            <Checkbox size={'md'} colorScheme="primary">
+            <Checkbox size={{ base: 'sm', md: 'md' }} colorScheme="primary">
               360 degree Tour{' '}
             </Checkbox>
           </Flex>
@@ -113,10 +132,13 @@ export default function OtherFilter() {
               color={'black'}
               variant={'ghost'}
               border={'1px solid #7B8088'}
+              w={'7rem'}
             >
               Reset
             </Button>
-            <Button onClick={onClose}>Done</Button>
+            <Button w={'7rem'} onClick={onClose}>
+              Done
+            </Button>
           </Flex>
         </PopoverBody>
       </PopoverContent>

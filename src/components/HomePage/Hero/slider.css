@@ -2,7 +2,6 @@
   /* position: relative; */
   user-select: none;
   height: 36rem;
-  /* background-color: white; */
   /* overflow-y: auto; */
 
   /* margin-bottom: 5rem; */
@@ -43,9 +42,9 @@
 }
 
 .mySwiper .swiper-pagination {
-    position: absolute;
+  position: absolute;
   bottom: 0rem !important;
-/* border: 1px solid red; */
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,4 +69,47 @@
   background: #84143a;
   border: 5.5px solid #cd9fae;
   border-radius: 100%;
+}
+
+/* Mobile styles (applies to screens up to 767px wide) */
+@media only screen and (max-width: 767px) {
+  .mySwiper::after {
+    width: 200%;
+    height: 10rem;
+    background-color: whrite;
+    left: 42%;
+  }
+
+  .mySwiper::before {
+    width: 140%;
+    height: 6rem;
+    left: 48%;
+
+    background-color: r3ed;
+    bottom: -1rem;
+  }
+
+  .mySwiper .swiper-pagination {
+    bottom: -1rem !important;
+  }
+  .mySwiper .swiper-pagination-bullet {
+    background: #cd9fae;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    border-radius: 100%;
+    opacity: 0.3;
+    border: 1px solid #84143a;
+  }
+
+  .mySwiper .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    background: #84143a;
+    border: 3.5px solid #cd9fae;
+    border-radius: 100%;
+  }
+  .mySwiper {
+    height: 22rem;
+  }
 }

@@ -12,14 +12,12 @@ export default function PropertiesListing() {
       <SizeWrapper>
         <Grid
           templateColumns={{
-            base: 'repeat(2, 1fr)',
+            base: 'repeat(1, 1fr)',
             md: 'repeat(3, 1fr)',
-            lg: 'repeat(3, 1fr)',
-            xl: 'repeat(3, 1fr)',
           }}
           gap={'1.5rem'}
           rowGap={'3rem'}
-          mb={'5rem'}
+          mb={{ base: '3.7rem', md: '5rem' }}
         >
           {properties.map((item, index) => (
             <GridItem key={index}>

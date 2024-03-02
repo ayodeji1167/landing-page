@@ -4,20 +4,21 @@ import Image from '@/components/Ui/chakra/Image';
 import Grid from '@/components/Ui/chakra/Grid';
 import Center from '@/components/Ui/chakra/Center';
 import Button from '@/components/Ui/chakra/Button';
+import Flex from '@/components/Ui/chakra/Flex';
 import GridItem from '@/components/Ui/chakra/GridItem';
 import SizeWrapper from '@/components/SizeWrapper/SizeWrapper';
 import { offerings } from './offerings';
 
 export default function OurOfferings() {
   return (
-    <Box bg="#F3E8EB" py={'6rem'}>
+    <Box bg="#F3E8EB" py={{ base: '2.5rem', md: '6rem' }}>
       <SizeWrapper>
         <Text
           fontWeight={700}
           textTransform={'uppercase'}
           fontFamily={'heading'}
           as="h3"
-          fontSize={'2.5rem'}
+          fontSize={{ base: '1rem', md: '2.5rem' }}
           mb={'2rem'}
         >
           Our Offerings
@@ -25,7 +26,7 @@ export default function OurOfferings() {
 
         <Grid
           templateColumns={{
-            base: 'repeat(2, 1fr)',
+            base: 'repeat(1, 1fr)',
             md: 'repeat(3, 1fr)',
             lg: 'repeat(3, 1fr)',
             xl: 'repeat(3, 1fr)',
@@ -41,29 +42,39 @@ export default function OurOfferings() {
               rounded={'.7rem'}
               key={index}
             >
-              <Box mb={'.8rem'}>
-                <Image
-                  w={'40px'}
-                  src={offering.icon.src}
-                  alt={offering.title}
-                />
-              </Box>
-              <Text
+              <Flex
+                gap={'0.8rem'}
                 mb={'0.7rem'}
-                color={'gray.700'}
-                fontSize={'1.2rem'}
-                fontWeight={700}
-                fontFamily={'heading'}
+                alignItems={{ base: 'center', md: 'flex-start' }}
+                direction={{ base: 'row', md: 'column' }}
               >
-                {offering.title}
+                <Box>
+                  <Image
+                    w={{ base: '30px', md: '40px' }}
+                    src={offering.icon.src}
+                    alt={offering.title}
+                  />
+                </Box>
+                <Text
+                  color={'gray.700'}
+                  fontSize={{ base: '0.8rem', md: '1.2rem' }}
+                  fontWeight={{ base: 600, md: 700 }}
+                  fontFamily={{ base: 'body', md: 'heading' }}
+                >
+                  {offering.title}
+                </Text>
+              </Flex>
+              <Text fontSize={{ base: '.8rem', md: '.9rem' }} color={'#6B6B6B'}>
+                {offering.description}
               </Text>
-              <Text color={'#6B6B6B'}>{offering.description}</Text>
             </GridItem>
           ))}
         </Grid>
 
-        <Center mt={'3rem'}>
-          <Button minW={'10rem'}>Start Your Journey</Button>
+        <Center mt={{ base: '1.9rem', md: '3rem' }}>
+          <Button minW={{ base: '14rem', md: '10rem' }}>
+            Start Your Journey
+          </Button>
         </Center>
       </SizeWrapper>
     </Box>

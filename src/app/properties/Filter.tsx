@@ -14,7 +14,12 @@ export default function Filter() {
   return (
     <Box pt={'3.2rem'}>
       <SizeWrapper>
-        <Flex gap={'1.5rem'} alignItems={'center'}>
+        <Flex
+          display={{ base: 'none', md: 'flex' }}
+          gap={'1.5rem'}
+          alignItems={'center'}
+          flexWrap={'wrap'}
+        >
           <SearchInput />
           <InterestedIn />
           <PropertyType />
@@ -25,7 +30,23 @@ export default function Filter() {
           </Button>
           <OtherFilter />
         </Flex>
-        <PopularSearches />
+        <Box display={{ base: 'none', md: 'block' }}>
+          <PopularSearches />
+        </Box>
+
+        {/* ==========MOBILE FILTER ================ */}
+        <Box display={{ base: 'block', md: 'none' }}>
+          <Box>
+            <SearchInput />
+          </Box>
+          <Flex
+            mt={'1rem'}
+            alignItems={'center'}
+            justifyContent={'space-between'}
+          >
+            <InterestedIn /> <OtherFilter /> <Price />
+          </Flex>
+        </Box>
       </SizeWrapper>
     </Box>
   );
