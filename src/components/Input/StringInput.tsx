@@ -33,7 +33,7 @@ export default function StringInput(props: StringInputProps) {
         _placeholder={{ color: '#424955' }}
         {...props.inputProps}
         errorBorderColor="crimson"
-        h={'3rem'}
+        h={{ base: '2.8rem', md: '3rem' }}
         rounded={'1.2rem'}
         border="1px solid #636D79"
       />

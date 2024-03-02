@@ -21,11 +21,11 @@ export default function Header() {
           bg={'white'}
           zIndex={20}
           position={'relative'}
-          h={'5rem'}
+          h={{ base: '3.75rem', md: '5rem' }}
           alignItems={'center'}
           justifyContent={'space-between'}
         >
-          <Box w={'4rem'} cursor={'pointer'}>
+          <Box w={{ base: '3rem', md: '4rem' }} cursor={'pointer'}>
             <Logo to="/" />
           </Box>
           <Flex
