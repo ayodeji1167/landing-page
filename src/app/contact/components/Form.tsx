@@ -15,7 +15,7 @@ export default function Form() {
   return (
     <Box
       pt={{ base: '0rem', md: '6rem' }}
-      pb={{ base: '1.2rem', md: '8rem' }}
+      pb={{ base: '2.2rem', md: '8rem' }}
       maxW={{ base: '95%', md: '60%' }}
       mx={'auto'}
     >
