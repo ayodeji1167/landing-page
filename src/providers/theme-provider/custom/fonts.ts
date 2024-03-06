@@ -1,8 +1,7 @@
 const fonts = {
-  heading: `'BR Firma',sans-serif`,
-  body: `'DM Sans',sans-serif`,
+  heading: 'var(--font-josefin)',
+  body: 'var(--font-urbanist)',
 };
-
 const fontSizes = {
   xs: '11px',
   sm: '13px',
@@ -59,7 +58,6 @@ const textStyles = {
     fontSize: { base: '14px', md: '16px' },
     fontWeight: 'regular',
     lineHeight: '165%',
-    fontFamily: 'body',
   },
   subHeading: {
     fontSize: { base: '20px', md: '26px' },
