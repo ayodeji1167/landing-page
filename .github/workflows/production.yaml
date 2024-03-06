@@ -29,7 +29,7 @@ jobs:
           instance-id: i-02e9039ce25c3757b
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
-          commands:
+          commands: |
             - cd /landing-page # Replace with your app directory
             - yarn install # Install dependencies
             - yarn run build # Build the Next.js app
