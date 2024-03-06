@@ -1,8 +1,8 @@
 name: CI/CD - Update Next.js app on AWS
 
 on:
-  push:
-    branches: [main]
+  pull_request:  # Trigger on pull requests
+    branches: [ main ]
 
 jobs:
   update-app:
@@ -35,4 +35,4 @@ jobs:
             - yarn run build # Build the Next.js app
             - pm2 stop nextjs-app # Replace with your app name
             - pm2 delete nextjs-app # Replace with your app name
-            - ppm2 start npm --name nextjs-app -- run start -- -p 3000 # Start the new app
+            - pm2 start npm --name nextjs-app -- run start -- -p 3000 # Start the new app
