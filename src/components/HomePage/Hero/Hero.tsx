@@ -27,7 +27,7 @@ export default function Hero() {
             fontFamily={'heading'}
             maxW={'60rem'}
           >
-            {`Discover Your Dream Home in Dubai with BATs Properties`}{' '}
+            {`Discover ADDED GIT Your Dream Home in Dubai with BATs Properties`}{' '}
           </Text>
           <Text
             lineHeight={{ base: '1rem', md: '1.5rem' }}
@@ -36,7 +36,7 @@ export default function Hero() {
             color={'white'}
             fontSize={{ base: '0.8rem', md: '1.1rem' }}
           >
-            Explore ourr diverse range of residential and commercial properties,
+            Explore our diverse range of residential and commercial properties,
             crafted to elevate your living and business experiences
           </Text>
         </Center>
