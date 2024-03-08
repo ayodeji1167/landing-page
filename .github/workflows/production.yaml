@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.EC2_PEM_KEY }}
           script: |
            cd ~/landing-page
-           npm install -g yarn
+           sudo npm install -g yarn
            yarn install
            yarn run build
            yarn run start
