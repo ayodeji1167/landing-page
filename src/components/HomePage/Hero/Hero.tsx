@@ -36,7 +36,7 @@ export default function Hero() {
             color={'white'}
             fontSize={{ base: '0.8rem', md: '1.1rem' }}
           >
-            Explore our diverse range of residential and commercial properties,
+            Explore ourr diverse range of residential and commercial properties,
             crafted to elevate your living and business experiences
           </Text>
         </Center>
