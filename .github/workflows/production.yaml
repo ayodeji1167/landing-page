@@ -22,9 +22,6 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PEM_KEY }}
-      - name: Add EC2 Host Key to Known Hosts (if first time)
-        run: |
-          ssh-keyscan ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
       - name: Navigate to project directory
         run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
       - name: Install dependencies
