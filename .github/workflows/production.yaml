@@ -21,7 +21,7 @@ jobs:
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
-          key: ${{ secrets.EC2_PEM_KEY }}dd private key content as secret (securely)
+          key: ${{ secrets.EC2_PEM_KEY }}
       - name: Navigate to project directory
         run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
       - name: Install dependencies
