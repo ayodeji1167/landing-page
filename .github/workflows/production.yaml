@@ -2,7 +2,7 @@ name: CI/CD - Next.js App
 
 on:
   push:
-    branches: [develop]
+    branches: [dev]
 
 jobs:
   build-and-deploy:
@@ -16,8 +16,11 @@ jobs:
           node-version: '20.11.1'
           check-latest: true
 
-      - name: nstall Yarn
+      - name: Install Yarn
         run: npm install -g yarn
+        
+      - name: Build Next.js App
+        run: yarn build
         
       
       - name: Use AWS credentials
@@ -34,7 +37,6 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PEM_KEY }}
           script: |
-           git pull origin develop
            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
            source ~/.nvm/nvm.sh
            nvm install 20.11.1
