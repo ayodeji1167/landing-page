@@ -17,11 +17,11 @@ jobs:
           aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
           aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
       - name: SSH into EC2 instance (replace with your details)
-        uses: nyancatdaffy/ssh-action@v2
+        uses: appleboy/ssh-action@v2
         with:
-          host: ${{ secrets.EC2_HOST }} # Add EC2 instance hostname as secret
-          username: ${{ secrets.EC2_USERNAME }} # Add username for SSH access
-          privateKey: ${{ secrets.EC2_PEM_KEY }} # Add private key content as secret (securely)
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PEM_KEY }}dd private key content as secret (securely)
       - name: Navigate to project directory
         run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
       - name: Install dependencies
