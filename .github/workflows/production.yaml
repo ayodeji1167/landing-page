@@ -22,11 +22,8 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PEM_KEY }}
-      - name: Navigate to project directory
-        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
-      - name: Install dependencies
-        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn install"
-      - name: Build Next.js app
-        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run build"
-      - name: Restart pm2 process (adjust as needed)
-        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run start"  
+          script: |
+           cd /landing-page
+           yarn install
+           yarn run build
+           yarn run start
