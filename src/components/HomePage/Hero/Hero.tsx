@@ -27,7 +27,7 @@ export default function Hero() {
             fontFamily={'heading'}
             maxW={'60rem'}
           >
-            Discover GIT WORK RUNNER Your Dream Home in Dubai with BATs Properties
+            {`Discover GIT WORK RUNNER Your Dream Home in Dubai with BATs Properties`}{' '}
           </Text>
           <Text
             lineHeight={{ base: '1rem', md: '1.5rem' }}
