@@ -22,6 +22,9 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PEM_KEY }}
+      - name: Add EC2 Host Key to Known Hosts (if first time)
+        run: |
+          ssh-keyscan ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
       - name: Navigate to project directory
         run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
       - name: Install dependencies
@@ -29,4 +32,4 @@ jobs:
       - name: Build Next.js app
         run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run build"
       - name: Restart pm2 process (adjust as needed)
-        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run start" # Replace with your pm2 app name
+        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run start"  
