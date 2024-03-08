@@ -1,38 +1,32 @@
-name: CI/CD - Update Next.js app on AWS
+name: CI/CD - Next.js App
 
 on:
-  pull_request:  # Trigger on pull requests
-    branches: [ main ]
+  push:
+    branches: [develop]
 
 jobs:
-  update-app:
-    runs-on: ubuntu-latest
-
+  build-and-deploy:
+    runs-on: ubuntu-latest # Adjust OS if needed
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Use Node.js 20.11.1
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20.11.1'
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build Next.js app
-        run: yarn run build
-
+      - uses: actions/checkout@v3 # Checkout code from repository
+      - name: Use AWS credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
       - name: SSH into EC2 instance (replace with your details)
-        uses: ttnsk1/run-on-aws@v1.4.0
+        uses: nyancatdaffy/ssh-action@v2
         with:
-          aws-region: us-east-1
-          instance-id: i-02e9039ce25c3757b
-          username: ubuntu
-          key: ${{ secrets.SSH_KEY }}
-          commands: |
-            - cd /landing-page # Replace with your app directory
-            - yarn install # Install dependencies
-            - yarn run build # Build the Next.js app
-            - pm2 stop nextjs-app # Replace with your app name
-            - pm2 delete nextjs-app # Replace with your app name
-            - pm2 start npm --name nextjs-app -- run start -- -p 3000 # Start the new app
+          host: ${{ secrets.EC2_HOST }} # Add EC2 instance hostname as secret
+          username: ${{ secrets.EC2_USERNAME }} # Add username for SSH access
+          privateKey: ${{ secrets.EC2_PEM_KEY }} # Add private key content as secret (securely)
+      - name: Navigate to project directory
+        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "cd landing-page"
+      - name: Install dependencies
+        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn install"
+      - name: Build Next.js app
+        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run build"
+      - name: Restart pm2 process (adjust as needed)
+        run: ssh ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }} "yarn run start" # Replace with your pm2 app name
