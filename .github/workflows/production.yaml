@@ -1,0 +1,47 @@
+name: CI/CD - Next.js App
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Adjust OS if needed
+    steps:
+      - uses: actions/checkout@v3 # Checkout code from repository
+
+      - name: Use Node.js 20.11.1
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+          check-latest: true
+
+      - name: Install Yarn
+        run: npm install -g yarn
+        
+      - name: Build Next.js App
+        run: yarn build
+        
+      
+      - name: Use AWS credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: |
+          aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+          aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+      - name: SSH into EC2 instance (replace with your details)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PEM_KEY }}
+          script: |
+           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+           source ~/.nvm/nvm.sh
+           nvm install 20.11.1
+           nvm use 20.11.1
+           cd ~/landing-page
+           yarn install
+           yarn run build
+           pm2 start npm --name nextjs-app -- run start -- -p 3000
